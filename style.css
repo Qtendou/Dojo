@@ -176,7 +176,7 @@ a { text-decoration: none; color: inherit; cursor: none; }
 /* Asymmetric Hero Typography */
 .hero-title-group {
   display: flex; flex-direction: row-reverse; align-items: center;
-  gap: 0.5rem; margin-bottom: 3rem;
+  gap: 0.5rem; margin-bottom: 1rem;
   position: relative; right: 0;
 }
 .hero-title-vertical {
@@ -190,12 +190,13 @@ a { text-decoration: none; color: inherit; cursor: none; }
   z-index: 10;
   position: relative;
   letter-spacing: 0.1em;
-  transform: translateY(50px);
+  transform: translateY(55px);
 }
 .hero-title-horizontal {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(1.5rem, 6vw, 4.5rem);
   font-weight: 900;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: keep-all;
 }
 @keyframes float-sway {
   0% { transform: rotate(-3deg) translateY(20px); }
@@ -216,8 +217,8 @@ a { text-decoration: none; color: inherit; cursor: none; }
 @keyframes revealTextAlpha { 100% { opacity: 1; } }
 @keyframes revealBlock { 0% { transform: translateX(-101%); } 50% { transform: translateX(0); } 100% { transform: translateX(101%); } }
 
-.hero-bottom { text-align: center; margin-top: 2rem; }
-.hero-subtitle { font-size: clamp(1rem, 2vw, 1.5rem); font-weight: bold; margin-bottom: 2rem; color: var(--color-text-light); line-height: 1.8; }
+.hero-bottom { text-align: center; margin-top: -4rem; position: relative; z-index: 10; }
+.hero-subtitle { font-size: clamp(1rem, 2vw, 1.5rem); font-weight: bold; margin-bottom: 0.5rem; color: var(--color-text-light); line-height: 1.8; }
 
 /* =========================================
    Dynamic Word Effects (書き換える/壊す/変える/バグ)
@@ -309,7 +310,7 @@ a { text-decoration: none; color: inherit; cursor: none; }
 .laboratory {
   padding-top: 10rem;
 }
-.overlap-title-center { margin-bottom: 5rem; font-size: 6rem; opacity: 0.1; position: absolute; top: 5%; left: 50%; transform: translateX(-50%); white-space: nowrap; pointer-events: none; }
+.overlap-title-center { margin-bottom: 5rem; font-size: 6rem; opacity: 0.1; position: absolute; top: 5%; left: 50%; transform: translateX(calc(-50% + 10px)); white-space: nowrap; pointer-events: none; }
 .asymmetric-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 5rem; margin-top: 5rem; }
 .mt-offset { margin-top: 12rem; } /* staggered layout */
 
@@ -428,7 +429,67 @@ a { text-decoration: none; color: inherit; cursor: none; }
   .mt-offset, .quote-sub { margin-top: 2rem; }
   .grid-free .sub-copy { margin-top: 0; }
   .hero-title-group { flex-direction: column; right: 0; gap: 1rem; }
-  .hero-title-vertical { writing-mode: horizontal-tb; text-orientation: upright; }
+  .hero-title-vertical { writing-mode: horizontal-tb; text-orientation: initial; font-size: clamp(2rem, 8vw, 3.5rem); transform: none; }
+  .vertical-title { writing-mode: horizontal-tb; }
   .bg-typography { font-size: 15vw; }
   .news-item a { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1.5rem !important; }
 }
+
+/* =========================================
+   Forms (Registration)
+========================================= */
+.glass-form {
+  background: rgba(10, 25, 47, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 3rem;
+}
+.form-group {
+  margin-bottom: 2rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+  color: var(--color-limestone-white);
+  font-size: 1.1rem;
+}
+.form-group .required {
+  background: rgba(255, 90, 0, 0.2);
+  color: var(--color-accent-orange);
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  border: 1px solid rgba(255, 90, 0, 0.5);
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--color-limestone-white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-accent-orange);
+  box-shadow: 0 0 10px rgba(255, 90, 0, 0.2);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-back:hover {
+  border-color: var(--color-accent-orange);
+  text-shadow: 0 0 10px rgba(255, 90, 0, 0.8);
+}
+

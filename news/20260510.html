@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>第一回南城市CoderDojo - CodeDojo.南城</title>
+  <title>第一回CoderDojo南城お試し開催 - CodeDojo.南城</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="shortcut icon" type="image/png" href="../favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
   <style>
     /* Article / Event Layout specific styles */
     .article-container {
@@ -25,22 +28,26 @@
       padding: 4rem;
       color: var(--color-limestone-white);
     }
+
     .article-header {
       margin-bottom: 3rem;
       border-bottom: 2px solid rgba(255, 255, 255, 0.1);
       padding-bottom: 2rem;
     }
+
     .article-title {
       font-size: clamp(1.8rem, 4vw, 2.5rem);
       margin-bottom: 1rem;
       line-height: 1.4;
       color: var(--color-accent-orange);
     }
+
     .article-meta {
       font-family: var(--font-mono);
       color: rgba(255, 255, 255, 0.6);
       font-size: 1.1rem;
     }
+
     .article-content h3 {
       font-size: 1.8rem;
       margin-top: 3rem;
@@ -49,25 +56,31 @@
       border-bottom: 1px solid rgba(255, 90, 0, 0.3);
       color: var(--color-limestone-white);
     }
+
     .article-content h4 {
       font-size: 1.3rem;
       margin-top: 2rem;
       margin-bottom: 1rem;
       color: #48CAE4;
     }
-    .article-content p, .article-content ul {
+
+    .article-content p,
+    .article-content ul {
       font-size: 1.1rem;
       line-height: 1.8;
       margin-bottom: 1.5rem;
       color: var(--color-text-light);
     }
+
     .article-content ul {
       padding-left: 0;
       list-style: none;
     }
+
     .article-content li {
       margin-bottom: 0.8rem;
     }
+
     .form-placeholder {
       background: rgba(255, 90, 0, 0.1);
       border: 2px dashed var(--color-accent-orange);
@@ -76,12 +89,13 @@
       text-align: center;
       margin-top: 3rem;
     }
+
     .form-placeholder h3 {
       margin-top: 0;
       border-bottom: none;
       color: var(--color-accent-orange);
     }
-    
+
     /* Caution Box Styles */
     .caution-box {
       position: relative;
@@ -89,35 +103,38 @@
       border: 3px solid #000;
       padding: 3rem 2rem;
       margin: 4rem 0;
-      box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.5);
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8), 0 10px 30px rgba(0, 0, 0, 0.5);
     }
-    .caution-tape-top, .caution-tape-bottom {
+
+    .caution-tape-top,
+    .caution-tape-bottom {
       position: absolute;
       left: -10px;
       right: -10px;
       height: 35px;
-      background: repeating-linear-gradient(
-        45deg,
-        #FFD700,
-        #FFD700 20px,
-        #000 20px,
-        #000 40px
-      );
+      background: repeating-linear-gradient(45deg,
+          #FFD700,
+          #FFD700 20px,
+          #000 20px,
+          #000 40px);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
       z-index: 2;
       overflow: hidden;
     }
+
     .caution-tape-top {
       top: -15px;
       transform: rotate(-1deg);
     }
+
     .caution-tape-bottom {
       bottom: -15px;
       transform: rotate(1deg);
     }
+
     .caution-tape-text {
       background: #FFD700;
       color: #000;
@@ -127,19 +144,23 @@
       letter-spacing: 0.2em;
       white-space: nowrap;
     }
+
     .caution-content {
       position: relative;
       z-index: 1;
       text-align: center;
     }
+
     .caution-content p {
-      color: #ff4d4d !important; /* 赤文字 */
+      color: #ff4d4d !important;
+      /* 赤文字 */
       font-weight: bold;
       font-size: 1.3rem;
       line-height: 1.6;
       margin: 0;
       text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
     }
+
     .caution-title {
       color: #FFD700 !important;
       text-align: center;
@@ -149,10 +170,13 @@
     }
 
     @media (max-width: 768px) {
-      .article-container { padding: 2rem; }
+      .article-container {
+        padding: 2rem;
+      }
     }
   </style>
 </head>
+
 <body class="asymmetric-layout">
   <!-- Custom Cursor -->
   <div class="cursor" id="cursor"></div>
@@ -167,32 +191,35 @@
   <main>
     <section class="section" style="padding-top: 8rem; padding-bottom: 5rem;">
       <div class="container">
-        <a href="index.html" class="btn-back magnetic" style="display: inline-block; margin-bottom: 3rem; color: var(--color-accent-orange); font-weight: bold; font-family: var(--font-heading); text-transform: uppercase; border-bottom: 2px solid transparent; transition: border-color 0.3s ease;">
+        <a href="../index.html" class="btn-back magnetic"
+          style="display: inline-block; margin-bottom: 3rem; color: var(--color-accent-orange); font-weight: bold; font-family: var(--font-heading); text-transform: uppercase; border-bottom: 2px solid transparent; transition: border-color 0.3s ease;">
           <span style="margin-right: 0.5rem;">&larr;</span> Back to Home
         </a>
 
-        <div class="article-container reveal-slide-up">
+        <div class="article-container">
           <div class="article-header">
-            <h1 class="article-title text-glow">第一回南城市CoderDojo開催！</h1>
+            <h1 class="article-title text-glow">第一回CoderDojo南城お試し開催！</h1>
             <div class="article-meta">2026.05.10 / Event</div>
           </div>
 
           <div class="article-content">
             <p>
-              プログラミングやマイクラ、デジタル創作に興味がある方必見！<br>
-              南城市役所をベースキャンプに、自分の「やりたいこと」を形にする自由なクリエイティブスペースをオープンします。
+              現在、世界的なプログラミングコミュニティである、CoderDojoを南城市に設立するべく、市内の中学生が主体となり、設立手続きを進めています。南城市の18歳未満のみんなと創作活動を楽しみながら、どんな開催がより楽しくなるかを考えるために、プレ開催します！プログラミングやマイクラ、デジタル創作に関心のある18歳未満の方、一緒に楽しみましょう！<br>
+              みんなのやりたいことを形にする自由なクリエイティブな時間、CoderDojoを一緒に楽しむ仲間を募集します！
             </p>
 
             <h3>開催概要</h3>
             <ul>
               <li><strong>日時：</strong> 2026年5月10日（日） 14:00〜17:00</li>
-              <li><strong>対象：</strong> 小学3年生〜18歳までの学生（PC操作がある程度できる方推奨）</li>
+              <li><strong>対象：</strong> 小学3年生〜18歳までの方（PC操作がある程度できる方推奨）</li>
               <li><strong>参加費：</strong> 無料</li>
               <li><strong>会場：</strong> 南城市役所 1F 大会議室<br>（沖縄県南城市佐敷字新里1870番地）</li>
+              <li><strong>持ち物：</strong>
+                ノートパソコン、タブレットなど創作活動に必要な機器を持参ください。会場に体験用のパソコンを数台準備していますが、借用は交代制、順番待ちになりますのでご了承ください。</li>
             </ul>
 
             <h3>CoderDojoの楽しみ方</h3>
-            
+
             <h4>🎮 自分の「やりたい」を形に</h4>
             <p>
               マインクラフトでの建築やプログラミング、デジタルイラスト、動画制作など、あなたが今ハマっているデジタル創作を自由に楽しむ時間です。
@@ -250,8 +277,12 @@
             <p>以下のフォームよりお申し込み下さい。</p>
 
             <!-- 申し込みフォーム (Google Forms) -->
-            <div class="form-container reveal-slide-up" style="margin-top: 3rem; background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 1rem; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfyOZTXCvcZFNiajXBHm6Wmc7hZI2nctP-Zvy2pXv7-YBlyrg/viewform?embedded=true" width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0" style="border: none;">読み込んでいます…</iframe>
+            <div class="form-container reveal-slide-up" style="margin-top: 3rem; text-align: center;">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyOZTXCvcZFNiajXBHm6Wmc7hZI2nctP-Zvy2pXv7-YBlyrg/viewform"
+                target="_blank" rel="noopener noreferrer" class="magnetic"
+                style="display: inline-block; padding: 1.2rem 3rem; font-size: 1.2rem; font-weight: bold; color: #fff; background: linear-gradient(135deg, var(--color-accent-orange, #ff5a00), #ff8c00); border-radius: 50px; text-decoration: none; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 20px rgba(255, 90, 0, 0.3);">
+                申込みフォームを開く
+              </a>
             </div>
 
           </div>
@@ -262,12 +293,18 @@
 
   <footer class="footer">
     <div class="container text-center">
+      <div style="margin-bottom: 2rem;">
+        <a href="https://forms.gle/9Gci9aAaHjvnj59h7" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent-orange); text-decoration: underline; font-weight: bold; font-size: 1.1rem; letter-spacing: 0.05em; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+          お問い合わせはこちら
+        </a>
+      </div>
       <p class="footer-copy">&copy; 2026 CodeDojo.Nanjo All Rights Reserved.</p>
     </div>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
+
 </html>

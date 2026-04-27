@@ -93,7 +93,7 @@ html, body {
 h1, h2, h3, h4 { font-family: var(--font-heading); letter-spacing: 0.05em; }
 a { text-decoration: none; color: inherit; cursor: none; }
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 5%; position: relative; }
-.section { padding: 150px 0; position: relative; z-index: 1; }
+.section { padding: 7rem 0; position: relative; z-index: 1; }
 .text-center { text-align: center; }
 
 /* =========================================
@@ -217,8 +217,8 @@ a { text-decoration: none; color: inherit; cursor: none; }
 @keyframes revealTextAlpha { 100% { opacity: 1; } }
 @keyframes revealBlock { 0% { transform: translateX(-101%); } 50% { transform: translateX(0); } 100% { transform: translateX(101%); } }
 
-.hero-bottom { text-align: center; margin-top: -4rem; position: relative; z-index: 10; }
-.hero-subtitle { font-size: clamp(1rem, 2vw, 1.5rem); font-weight: bold; margin-bottom: 0.5rem; color: var(--color-text-light); line-height: 1.8; }
+.hero-bottom { text-align: center; margin-top: -4rem; position: relative; z-index: 10; transform: translateY(-3rem); }
+.hero-subtitle { font-size: clamp(1rem, 2vw, 1.5rem); font-weight: bold; margin-bottom: 1.5rem; color: var(--color-text-light); line-height: 1.8; }
 
 /* =========================================
    Dynamic Word Effects (書き換える/壊す/変える/バグ)
@@ -283,7 +283,7 @@ a { text-decoration: none; color: inherit; cursor: none; }
 /* =========================================
    Concept: Next Door Gov
 ========================================= */
-.next-door-gov { padding-top: 15rem; background-color: transparent; }
+.next-door-gov { padding-top: 9rem; background-color: transparent; }
 .grid-free {
   display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative;
 }
@@ -308,11 +308,11 @@ a { text-decoration: none; color: inherit; cursor: none; }
    The Laboratory (Programs)
 ========================================= */
 .laboratory {
-  padding-top: 10rem;
+  padding-top: 7rem;
 }
-.overlap-title-center { margin-bottom: 5rem; font-size: 6rem; opacity: 0.1; position: absolute; top: 5%; left: 50%; transform: translateX(calc(-50% + 10px)); white-space: nowrap; pointer-events: none; }
-.asymmetric-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 5rem; margin-top: 5rem; }
-.mt-offset { margin-top: 12rem; } /* staggered layout */
+.overlap-title-right { font-size: clamp(2.5rem, 6vw, 5rem); position: absolute; top: -2rem; right: 5%; text-align: right; white-space: nowrap; pointer-events: none; z-index: 10; }
+.asymmetric-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; margin-top: 3rem; }
+.mt-offset { margin-top: 5rem; } /* staggered layout */
 
 /* Blueprint Cards */
 .blueprint-card {
@@ -345,12 +345,12 @@ a { text-decoration: none; color: inherit; cursor: none; }
 /* =========================================
    Voice of Creators
 ========================================= */
-.voice-of-creators { padding-top: 15rem; padding-bottom: 10rem; }
+.voice-of-creators { padding-top: 8rem; padding-bottom: 8rem; }
 .grid-free-reverse { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; position: relative; }
 .overlap-title { position: absolute; left: 0; top: -6rem; font-size: 5rem; color: var(--color-accent-orange); opacity: 0.1; z-index: 0; pointer-events: none; }
 
 .quote-block { position: relative; z-index: 2; background: rgba(255,255,255,0.02); padding: 4rem; border-radius: 20px; border-left: 4px solid var(--color-accent-orange); }
-.quote-sub { margin-top: 10rem; border-left: none; border-right: 4px solid var(--color-accent-orange); text-align: right; }
+.quote-sub { margin-top: 5rem; border-left: none; border-right: 4px solid var(--color-accent-orange); text-align: right; }
 
 .quote-mark { font-size: 10rem; color: var(--color-accent-orange); opacity: 0.1; position: absolute; top: -3rem; left: 1rem; font-family: 'Times New Roman', serif; line-height: 1; pointer-events: none; }
 .quote-sub .quote-mark { left: auto; right: 1rem; }

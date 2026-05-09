@@ -145,7 +145,7 @@ a {
 }
 
 .section {
-  padding: 150px 0;
+  padding: 110px 0;
   position: relative;
   z-index: 1;
 }
@@ -229,11 +229,14 @@ a {
    Hero Section Layout
 ========================================= */
 .vertical-hero {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: max(3rem, env(safe-area-inset-top)) 0 max(5rem, calc(env(safe-area-inset-bottom) + 4rem));
   overflow: hidden;
   position: relative;
   perspective: 1000px;
@@ -295,6 +298,10 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: clamp(1.5rem, 4vh, 3rem);
+  width: 100%;
+  padding-bottom: 1rem;
 }
 
 /* Asymmetric Hero Typography */
@@ -395,9 +402,10 @@ a {
 
 .hero-bottom {
   text-align: center;
-  margin-top: -4rem;
+  margin-top: 0;
   position: relative;
   z-index: 10;
+  padding-bottom: 0.5rem;
 }
 
 .hero-subtitle {
@@ -682,7 +690,7 @@ a {
    Concept: Next Door Gov
 ========================================= */
 .next-door-gov {
-  padding-top: 15rem;
+  padding-top: 8rem;
   background-color: transparent;
 }
 
@@ -753,7 +761,7 @@ a {
    The Laboratory (Programs)
 ========================================= */
 .laboratory {
-  padding-top: 7rem;
+  padding-top: 5rem;
 }
 
 .overlap-title-center {
@@ -856,8 +864,8 @@ a {
    Voice of Creators
 ========================================= */
 .voice-of-creators {
-  padding-top: 15rem;
-  padding-bottom: 10rem;
+  padding-top: 8rem;
+  padding-bottom: 7rem;
 }
 
 .grid-free-reverse {
@@ -969,6 +977,81 @@ a {
 /* =========================================
    News (お知らせ)
 ========================================= */
+.line-openchat-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(220px, 280px);
+  gap: 2rem;
+  align-items: center;
+  margin: 0 0 3rem;
+  padding: 2rem;
+  border: 1px solid rgba(72, 202, 228, 0.25);
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(72, 202, 228, 0.12), rgba(255, 90, 0, 0.1)),
+    rgba(10, 25, 47, 0.72);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+}
+
+.line-community {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.line-openchat-label {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(6, 199, 85, 0.16);
+  color: #7cf0aa;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.line-openchat-title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.3;
+}
+
+.line-openchat-text {
+  margin: 0 0 1.5rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.line-openchat-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line-openchat-qr {
+  display: block;
+  width: min(100%, 280px);
+  justify-self: end;
+  padding: 0.75rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.line-openchat-qr:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28);
+}
+
+.line-openchat-qr img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
 .news-list {
   list-style: none;
   padding: 0;
@@ -1129,6 +1212,10 @@ a {
 /* Responsive adjustments */
 @media (max-width: 900px) {
 
+  .section {
+    padding: 84px 0;
+  }
+
   .grid-free,
   .grid-free-reverse,
   .asymmetric-grid {
@@ -1164,6 +1251,38 @@ a {
 
   .bg-typography {
     font-size: 15vw;
+  }
+
+  .next-door-gov,
+  .laboratory,
+  .voice-of-creators,
+  .line-community {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+
+  .vertical-hero {
+    padding-top: max(2rem, env(safe-area-inset-top));
+    padding-bottom: max(4rem, calc(env(safe-area-inset-bottom) + 3rem));
+  }
+
+  .hero-content {
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .hero-bottom {
+    width: 100%;
+  }
+
+  .line-openchat-card {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .line-openchat-qr {
+    width: min(100%, 240px);
+    justify-self: start;
   }
 
   .news-item a {

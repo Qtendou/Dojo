@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>子育てに関する講座のご案内 - CodeDojo.南城</title>
+
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="shortcut icon" type="image/png" href="../favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(10, 25, 47, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 4rem;
+      color: var(--color-limestone-white);
+    }
+
+    .article-header {
+      margin-bottom: 3rem;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 2rem;
+    }
+
+    .article-title {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      color: var(--color-accent-orange);
+    }
+
+    .article-meta {
+      font-family: var(--font-mono);
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.1rem;
+    }
+
+    .article-content h3 {
+      font-size: 1.8rem;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255, 90, 0, 0.3);
+      color: var(--color-limestone-white);
+    }
+
+    .article-content h4 {
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #48CAE4;
+    }
+
+    .article-content p,
+    .article-content ul {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: var(--color-text-light);
+    }
+
+    .article-content ul {
+      padding-left: 1.2rem;
+    }
+
+    .article-content li {
+      margin-bottom: 0.8rem;
+    }
+
+    .article-image-link {
+      display: block;
+      margin: 2rem 0 2.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .article-image-link:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .article-image {
+      display: block;
+      width: 100%;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .article-caption {
+      margin-top: -1rem;
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .reference-links {
+      padding-left: 1.2rem;
+    }
+
+    .reference-links a {
+      color: #7dd3fc;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .article-container {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="asymmetric-layout">
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+  <div id="tide-bg" class="tide-background"></div>
+  <canvas id="wave-canvas"></canvas>
+  <div id="bg-typography" class="bg-typography">NEWS</div>
+
+  <main>
+    <section class="section" style="padding-top: 8rem; padding-bottom: 5rem;">
+      <div class="container">
+        <a href="../index.html" class="btn-back magnetic"
+          style="display: inline-block; margin-bottom: 3rem; color: var(--color-accent-orange); font-weight: bold; font-family: var(--font-heading); text-transform: uppercase; border-bottom: 2px solid transparent; transition: border-color 0.3s ease;">
+          <span style="margin-right: 0.5rem;">&larr;</span> Back to Home
+        </a>
+
+        <div class="article-container">
+          <div class="article-header">
+            <h1 class="article-title text-glow">子育てに関する講座のご案内</h1>
+            <div class="article-meta">2026.05.11 / Info</div>
+          </div>
+
+          <div class="article-content">
+            <a class="article-image-link" href="../assets/news-20260511.png" target="_blank" rel="noopener noreferrer">
+              <img class="article-image" src="../assets/news-20260511.png" alt="南城市家庭教育講座「不登校の新しい解決法を知ろう！学ぼう！」の案内画像">
+            </a>
+            <p class="article-caption">画像をクリックすると、元の大きな画像を表示できます。</p>
+
+            <p>子育ての悩みに関する学びの機会のご紹介です</p>
+
+            <p>子どもの体調や学校生活、親子関係のことなど、子育ての中で向き合う悩みについて、外部の講座情報をひとつご紹介します。</p>
+
+            <p>CoderDojo南城の主催イベントではありませんが、「こういう情報提供の機会もある」という参考情報として共有します。</p>
+
+            <h3>講座概要</h3>
+            <ul>
+              <li><strong>講座名:</strong> 南城市家庭教育講座「不登校の解決方法を知ろう！学ぼう！」</li>
+              <li><strong>内容:</strong> 起立性調節障害に関する専門家の講話</li>
+              <li><strong>日時:</strong> 2026年5月30日（土）15:00〜17:00</li>
+              <li><strong>会場:</strong> 南城市役所 大会議室</li>
+              <li><strong>費用:</strong> 無料</li>
+            </ul>
+
+            <h4>どんな内容か</h4>
+            <p>講師は、起立性調節障害のコミュニティを運営している方です。ご自身のお子さまの体験と専門的な知見の両面から、起立性調節障害に起因する不登校や、そこから生じやすい親子関係の悩みについて、解決の糸口を伝える内容とのことです。</p>
+
+            <p>同じような悩みを抱えている保護者の方にとって、状況を整理したり、向き合い方を考えたりするきっかけのひとつになるかもしれません。</p>
+
+            <h4>参考リンク</h4>
+            <ul class="reference-links">
+              <li><a href="https://www.city.nanjo.okinawa.jp/topics/1777526586/" target="_blank" rel="noopener noreferrer">南城市オフィシャルサイトの案内ページ</a></li>
+              <li><a href="https://od-oyakonokai.jp/" target="_blank" rel="noopener noreferrer">講師プロフィール・活動情報</a></li>
+              <li><a href="https://youtu.be/buUPJdIrjzA?si=YawqC4TuFMa62ht6&t=3" target="_blank" rel="noopener noreferrer">起立性調節障害に関する講師動画</a></li>
+            </ul>
+
+            <h4>ご確認ください</h4>
+            <p>参加方法や最新情報は、主催者の案内をご確認ください。内容の詳細や募集状況に変更がある可能性もあるため、参加を検討される際は公式情報をあわせてご覧ください。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <div style="margin-bottom: 2rem;">
+        <a href="https://forms.gle/9Gci9aAaHjvnj59h7" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent-orange); text-decoration: underline; font-weight: bold; font-size: 1.1rem; letter-spacing: 0.05em; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+          お問い合わせはこちら
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 CodeDojo.Nanjo All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="../script.js"></script>
+</body>
+
+</html>

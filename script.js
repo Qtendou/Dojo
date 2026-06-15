@@ -424,3 +424,40 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   }
 });
+
+// ==========================================
+// 10. Countdown Timer
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  const targetDate = new Date('2026-06-21T00:00:00+09:00').getTime();
+  const daysEl = document.getElementById('countdown-days');
+  const timeEl = document.getElementById('countdown-time');
+  
+  if (!daysEl || !timeEl) return;
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+      daysEl.innerText = "0";
+      timeEl.innerText = "00:00:00";
+      document.querySelector('.countdown-label').innerText = "イベント開催中！";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    daysEl.innerText = days;
+    timeEl.innerText = 
+      String(hours).padStart(2, '0') + ':' + 
+      String(minutes).padStart(2, '0') + ':' + 
+      String(seconds).padStart(2, '0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+});

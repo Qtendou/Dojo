@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第一回CoderDojo南城お試し開催 - CodeDojo.南城</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="shortcut icon" type="image/png" href="../favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* Article / Event Layout specific styles */
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(10, 25, 47, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 4rem;
+      color: var(--color-limestone-white);
+    }
+
+    .article-header {
+      margin-bottom: 3rem;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 2rem;
+    }
+
+    .article-title {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      color: var(--color-accent-orange);
+    }
+
+    .article-meta {
+      font-family: var(--font-mono);
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.1rem;
+    }
+
+    .article-content h3 {
+      font-size: 1.8rem;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255, 90, 0, 0.3);
+      color: var(--color-limestone-white);
+    }
+
+    .article-content h4 {
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #48CAE4;
+    }
+
+    .article-content p,
+    .article-content ul {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: var(--color-text-light);
+    }
+
+    .article-content ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .article-content li {
+      margin-bottom: 0.8rem;
+    }
+
+    .form-placeholder {
+      background: rgba(255, 90, 0, 0.1);
+      border: 2px dashed var(--color-accent-orange);
+      border-radius: 10px;
+      padding: 4rem 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .form-placeholder h3 {
+      margin-top: 0;
+      border-bottom: none;
+      color: var(--color-accent-orange);
+    }
+
+    /* Caution Box Styles */
+    .caution-box {
+      position: relative;
+      background: rgba(20, 20, 20, 0.8);
+      border: 3px solid #000;
+      padding: 3rem 2rem;
+      margin: 4rem 0;
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.5);
+      animation: danger-flash 0.8s infinite;
+    }
+    
+    @keyframes danger-flash {
+      0%, 100% {
+        box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.5);
+        border-color: #000;
+        background: rgba(20, 20, 20, 0.8);
+      }
+      50% {
+        box-shadow: inset 0 0 80px rgba(255, 0, 0, 1), 0 10px 60px rgba(255, 0, 0, 0.9);
+        border-color: #ff0000;
+        background: rgba(60, 0, 0, 1);
+      }
+    }
+
+    .caution-tape-top,
+    .caution-tape-bottom {
+      position: absolute;
+      left: -10px;
+      right: -10px;
+      height: 35px;
+      background: repeating-linear-gradient(45deg,
+          #FFD700,
+          #FFD700 20px,
+          #000 20px,
+          #000 40px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    .caution-tape-top {
+      top: -15px;
+      transform: rotate(-1deg);
+    }
+
+    .caution-tape-bottom {
+      bottom: -15px;
+      transform: rotate(1deg);
+    }
+
+    .caution-tape-text {
+      background: #FFD700;
+      color: #000;
+      font-weight: 900;
+      font-size: 1.1rem;
+      padding: 0 15px;
+      letter-spacing: 0.2em;
+      white-space: nowrap;
+    }
+
+    .caution-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .caution-content p {
+      color: #ff4d4d !important;
+      /* 赤文字 */
+      font-weight: bold;
+      font-size: 1.3rem;
+      line-height: 1.6;
+      margin: 0;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    }
+
+    .caution-title {
+      color: #FFD700 !important;
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 900;
+    }
+
+    @media (max-width: 768px) {
+      .article-container {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="asymmetric-layout">
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Background color overlay for tide effects -->
+  <div id="tide-bg" class="tide-background"></div>
+  <canvas id="wave-canvas"></canvas>
+
+  <div id="bg-typography" class="bg-typography">MEETUP</div>
+
+  <main>
+    <section class="section" style="padding-top: 8rem; padding-bottom: 5rem;">
+      <div class="container">
+        <a href="../index.html" class="btn-back magnetic"
+          style="display: inline-block; margin-bottom: 3rem; color: var(--color-accent-orange); font-weight: bold; font-family: var(--font-heading); text-transform: uppercase; border-bottom: 2px solid transparent; transition: border-color 0.3s ease;">
+          <span style="margin-right: 0.5rem;">&larr;</span> Back to Home
+        </a>
+
+        <div class="article-container">
+          <div class="article-header">
+            <h1 class="article-title text-glow">第2回 Coderdojo.Nanjo in 南遊祭 開催のお知らせ</h1>
+            <div class="article-meta">2026.06.07 / Event</div>
+          </div>
+
+          <div class="article-content">
+            <p>
+              今回はなんと、南城市役所で開催されるワクワクするイベント「南遊祭（なんゆうさい）」にブースを出展することになりました！そして、このブースでの活動を「第2回 コーダー道場南城」として開催いたします！<br><br>
+              南遊祭には、ほかにも楽しい体験ブースやキッチンカーがたくさん集まります。お祭りを楽しむついでに、ぜひ主催者が作ったゲームを体験してください。
+            </p>
+
+            <h3>開催概要</h3>
+            <ul>
+              <li><strong>日時：</strong> 2026年6月21日（日）10:00 〜 16:00</li>
+              <li><strong>場所：</strong> 南城市役所（「南遊祭」会場内のCoderDojoブース）</li>
+              <li><strong>参加費：</strong> 無料</li>
+              <li><strong>内容：</strong> CoderDojo南城の主催者が制作したゲームの体験・展示</li>
+              <li><strong>持ち物：</strong> 特になし！</li>
+            </ul>
+
+            <h3>参加方法</h3>
+            <p>当日は事前予約不要です！南遊祭の会場を回る途中に、いつでもお気軽に私たちのブースへお立ち寄りください。</p>
+
+            <div class="line-openchat-card reveal-slide-up" style="margin-top: 4rem;">
+              <div class="line-openchat-copy">
+                <p class="line-openchat-label">LINE OpenChat</p>
+                <h3 class="line-openchat-title">オープンチャット「CoderDojo南城」</h3>
+                <p class="line-openchat-text">開催情報などのお知らせはLINEで配信します！</p>
+                <a href="https://line.me/ti/g2/et2RMUPfWSarXC6NyS1pV4Phf2cipNI4Tadpcg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+                  class="btn btn-primary magnetic line-openchat-link" target="_blank" rel="noopener noreferrer">LINEで参加する</a>
+              </div>
+              <a href="https://line.me/ti/g2/et2RMUPfWSarXC6NyS1pV4Phf2cipNI4Tadpcg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+                class="line-openchat-qr" target="_blank" rel="noopener noreferrer" aria-label="CoderDojo南城 LINEオープンチャット">
+                <img src="../assets/line-openchat-qr.jpg" alt="CoderDojo南城 LINEオープンチャットのQRコード">
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <div style="margin-bottom: 2rem;">
+        <a href="https://forms.gle/9Gci9aAaHjvnj59h7" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent-orange); text-decoration: underline; font-weight: bold; font-size: 1.1rem; letter-spacing: 0.05em; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+          お問い合わせはこちら
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 CodeDojo.Nanjo All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="../script.js"></script>
+</body>
+
+</html>

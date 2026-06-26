@@ -465,8 +465,8 @@ a {
   z-index: 20;
 }
 
-.caution-tape-top,
-.caution-tape-bottom {
+.hero-tape-top,
+.hero-tape-bottom {
   position: absolute;
   width: 110vw;
   left: 50%;
@@ -485,15 +485,40 @@ a {
   to { background-position: -85px 0; }
 }
 
-.caution-tape-top {
+.hero-tape-top {
   top: -25px;
   transform: translateX(-50%) rotate(-2deg);
 }
 
-.caution-tape-bottom {
+.hero-tape-bottom {
   bottom: -25px;
   transform: translateX(-50%) rotate(2deg);
   animation-direction: reverse;
+}
+
+.caution-tape-top,
+.caution-tape-bottom {
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  height: 35px;
+  background: repeating-linear-gradient(45deg, #FFD700, #FFD700 20px, #000 20px, #000 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.caution-tape-top {
+  top: -15px;
+  transform: rotate(-1deg);
+}
+
+.caution-tape-bottom {
+  bottom: -15px;
+  transform: rotate(1deg);
 }
 
 .caution-tape-marquee {

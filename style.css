@@ -502,13 +502,14 @@ a {
   left: -10px;
   right: -10px;
   height: 35px;
-  background: repeating-linear-gradient(45deg, #FFD700, #FFD700 20px, #000 20px, #000 40px);
+  background: repeating-linear-gradient(45deg, #FFD700, #FFD700 30px, #000 30px, #000 60px);
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   z-index: 2;
   overflow: hidden;
+  animation: tape-bg-scroll 2s linear infinite;
 }
 
 .caution-tape-top {
@@ -519,6 +520,7 @@ a {
 .caution-tape-bottom {
   bottom: -15px;
   transform: rotate(1deg);
+  animation-direction: reverse;
 }
 
 .caution-tape-marquee {

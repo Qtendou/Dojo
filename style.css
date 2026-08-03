@@ -233,10 +233,8 @@ a {
   min-height: 100svh;
   min-height: 100dvh;
   height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: max(3rem, env(safe-area-inset-top)) 0 max(5rem, calc(env(safe-area-inset-bottom) + 4rem));
+  display: block;
+  padding: 0;
   overflow: hidden;
   position: relative;
   perspective: 1000px;
@@ -301,19 +299,75 @@ a {
   justify-content: center;
   gap: clamp(1.5rem, 4vh, 3rem);
   width: 100%;
-  padding-bottom: 1rem;
+  min-height: calc(100svh - 96px);
+  padding-top: clamp(2.5rem, 5vh, 4rem);
+  padding-bottom: max(4rem, calc(env(safe-area-inset-bottom) + 3rem));
 }
 
 .hero-identity {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: clamp(0.6rem, 1.2vw, 0.9rem);
   position: relative;
-  z-index: 10;
+  width: 100%;
+  min-height: 96px;
+  padding: max(0.7rem, env(safe-area-inset-top)) clamp(1.5rem, 4vw, 4rem) 0.7rem;
+  z-index: 30;
+  background: linear-gradient(90deg, #061121 0%, #0a192f 55%, #0c2b47 100%);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.hero-identity::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+.hero-identity::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent-orange), rgba(255, 90, 0, 0.2) 45%, transparent 85%);
+  pointer-events: none;
+}
+
+.hero-logo-frame {
+  position: relative;
+  flex: 0 0 auto;
+  width: clamp(64px, 5vw, 76px);
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.5));
+}
+
+.hero-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 364%;
+  max-width: none;
+  height: auto;
+  transform: translate(-51.4%, -45.8%);
+}
+
+.hero-identity-copy {
+  text-align: left;
 }
 
 .hero-dojo-name {
   color: var(--color-limestone-white);
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-size: clamp(1.35rem, 2.4vw, 2.1rem);
   font-weight: 900;
   letter-spacing: 0.03em;
   line-height: 1.1;
@@ -326,17 +380,16 @@ a {
 }
 
 .hero-dojo-description {
-  display: inline-block;
-  margin-top: 0.65rem;
-  padding: 0.35rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  border-radius: 999px;
-  background: rgba(6, 17, 33, 0.66);
-  color: var(--color-limestone-white);
-  font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+  display: block;
+  margin-top: 0.25rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(244, 244, 240, 0.78);
+  font-size: clamp(0.68rem, 1vw, 0.82rem);
   font-weight: 700;
-  letter-spacing: 0.08em;
-  backdrop-filter: blur(8px);
+  letter-spacing: 0.06em;
+  line-height: 1.4;
 }
 
 /* Asymmetric Hero Typography */
@@ -1570,21 +1623,22 @@ a {
   }
 
   .vertical-hero {
-    padding-top: max(2rem, env(safe-area-inset-top));
-    padding-bottom: max(4rem, calc(env(safe-area-inset-bottom) + 3rem));
+    padding: 0;
   }
 
   .hero-content {
     gap: 1.15rem;
-    padding-bottom: 1.5rem;
+    min-height: calc(100svh - 82px);
+    padding-top: 2.5rem;
+    padding-bottom: max(4rem, calc(env(safe-area-inset-bottom) + 3rem));
   }
 
   .hero-dojo-name {
-    font-size: clamp(1.8rem, 8vw, 2.75rem);
+    font-size: clamp(1.25rem, 3.8vw, 1.65rem);
   }
 
   .hero-dojo-description {
-    margin-top: 0.45rem;
+    margin-top: 0.2rem;
     letter-spacing: 0.04em;
   }
 
@@ -1628,8 +1682,24 @@ a {
 
 @media (max-width: 480px) {
   .hero-dojo-name {
-    font-size: 1.6rem;
+    font-size: clamp(1.15rem, 5.5vw, 1.35rem);
     white-space: nowrap;
+  }
+
+  .hero-identity {
+    min-height: 82px;
+    padding: max(0.6rem, env(safe-area-inset-top)) 1rem 0.6rem;
+    gap: 0.5rem;
+  }
+
+  .hero-logo-frame {
+    width: clamp(50px, 14vw, 58px);
+  }
+
+  .hero-dojo-description {
+    margin-top: 0.15rem;
+    font-size: clamp(0.62rem, 2.8vw, 0.72rem);
+    letter-spacing: 0.03em;
   }
 
   .hero-dojo-description {

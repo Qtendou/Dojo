@@ -304,6 +304,41 @@ a {
   padding-bottom: 1rem;
 }
 
+.hero-identity {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-dojo-name {
+  color: var(--color-limestone-white);
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.8), 0 0 24px rgba(255, 90, 0, 0.65);
+}
+
+.hero-dojo-name span {
+  margin-left: 0.18em;
+  font-family: var(--font-body);
+}
+
+.hero-dojo-description {
+  display: inline-block;
+  margin-top: 0.65rem;
+  padding: 0.35rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  background: rgba(6, 17, 33, 0.66);
+  color: var(--color-limestone-white);
+  font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  backdrop-filter: blur(8px);
+}
+
 /* Asymmetric Hero Typography */
 .hero-title-group {
   display: flex;
@@ -402,12 +437,44 @@ a {
 
 .hero-bottom {
   text-align: center;
-  margin-top: 0;
+  margin-top: clamp(0.75rem, 2vh, 1.5rem);
   position: relative;
   z-index: 10;
   padding-bottom: 0.5rem;
 }
 .hero-subtitle { font-size: clamp(1rem, 2vw, 1.5rem); font-weight: bold; margin-bottom: 2rem; color: var(--color-text-light); line-height: 1.8; }
+
+.audience-details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 2rem 0 0;
+  color: var(--color-limestone-white);
+  font-size: clamp(0.85rem, 1.7vw, 1rem);
+  font-weight: 700;
+}
+
+.audience-details span,
+.audience-details strong {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(6, 17, 33, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(8px);
+}
+
+.audience-details strong {
+  background: var(--color-accent-orange);
+  border-color: var(--color-accent-orange);
+  color: #fff;
+}
+
+.hero-bottom .btn {
+  min-width: min(100%, 240px);
+  text-transform: none;
+}
 
 /* =========================================
    Countdown Timer, Caution Box & Caution Tape
@@ -941,6 +1008,87 @@ a {
   margin-top: 5rem;
 }
 
+.supporters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+  margin-top: 5rem;
+}
+
+.supporters-grid > .blueprint-card {
+  padding: 3rem 2rem;
+}
+
+.supporters-grid .card-text {
+  font-size: 1rem;
+}
+
+.supporting-organizations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.supporter-organization-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 3rem 2.5rem;
+}
+
+.organization-mark {
+  display: grid;
+  place-items: center;
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--color-limestone-white);
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6b5cff, var(--color-accent-orange));
+  color: #fff;
+  font-size: 3rem;
+}
+
+.council-mark {
+  background: linear-gradient(135deg, #11998e, #48CAE4);
+  font-family: var(--font-body);
+  font-size: 2.25rem;
+  font-weight: 900;
+}
+
+.organization-copy .role {
+  margin-bottom: 0.5rem;
+  color: var(--color-accent-orange);
+  font-weight: 700;
+}
+
+.organization-copy .card-title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.supporter-site-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 170px;
+  justify-self: start;
+  margin-top: auto;
+  padding: 0.85rem 1.25rem;
+  border: 1px solid var(--color-accent-orange);
+  border-radius: 999px;
+  color: var(--color-limestone-white);
+  font-weight: 700;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.supporter-site-link:hover {
+  background: var(--color-accent-orange);
+  box-shadow: 0 8px 24px rgba(255, 90, 0, 0.35);
+}
+
 .mt-offset {
   margin-top: 12rem;
 }
@@ -1376,7 +1524,9 @@ a {
 
   .grid-free,
   .grid-free-reverse,
-  .asymmetric-grid {
+  .asymmetric-grid,
+  .supporters-grid,
+  .supporting-organizations-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
@@ -1425,12 +1575,37 @@ a {
   }
 
   .hero-content {
-    gap: 1.5rem;
+    gap: 1.15rem;
     padding-bottom: 1.5rem;
+  }
+
+  .hero-dojo-name {
+    font-size: clamp(1.8rem, 8vw, 2.75rem);
+  }
+
+  .hero-dojo-description {
+    margin-top: 0.45rem;
+    letter-spacing: 0.04em;
   }
 
   .hero-bottom {
     width: 100%;
+  }
+
+  .hero-subtitle {
+    margin-bottom: 1.5rem;
+  }
+
+  .audience-details {
+    justify-content: flex-start;
+  }
+
+  .supporter-organization-card {
+    padding: 2.5rem 2rem;
+  }
+
+  .supporter-site-link {
+    justify-self: start;
   }
 
   .line-openchat-card {
@@ -1448,6 +1623,43 @@ a {
     align-items: flex-start;
     gap: 1rem;
     padding: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-dojo-name {
+    font-size: 1.6rem;
+    white-space: nowrap;
+  }
+
+  .hero-dojo-description {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.78rem;
+  }
+
+  .hero-bottom {
+    padding-inline: 0.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+  }
+
+  .audience-details {
+    font-size: 0.78rem;
+    gap: 0.45rem;
+  }
+
+  .audience-details span,
+  .audience-details strong {
+    padding: 0.35rem 0.65rem;
+  }
+
+  .hero-bottom .btn {
+    max-width: 100%;
+    padding: 0.85rem 1.25rem;
+    font-size: 0.88rem;
   }
 }
 

@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CodeDojo.南城 - 南城から、世界を書き換える。</title>
+  <title>CoderDojo南城 - 子ども向けの無料プログラミング道場</title>
+  <meta name="description" content="CoderDojo南城は、南城市で小中高生（18歳未満）の創作を応援する、子ども向けの無料プログラミング道場です。">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
@@ -31,7 +32,7 @@
   <canvas id="wave-canvas"></canvas>
 
   <!-- Parallax Scrolling Huge Background Typography -->
-  <div id="bg-typography" class="bg-typography">CODEDOJO. NANJO</div>
+  <div id="bg-typography" class="bg-typography">CoderDojo Nanjo</div>
 
   <!-- Hero Section -->
   <header class="section hero vertical-hero">
@@ -46,6 +47,11 @@
     <canvas id="particles-canvas"></canvas>
 
     <div class="hero-content container">
+      <div class="hero-identity animate-fade-in">
+        <p class="hero-dojo-name">CoderDojo<span>南城</span></p>
+        <p class="hero-dojo-description">子どものためのプログラミング道場</p>
+      </div>
+
       <!-- Countdown Timer -->
       <div id="countdown-timer" class="countdown-wrapper animate-fade-in delay-05">
         <div class="hero-tape-top">
@@ -91,8 +97,7 @@
       </div>
 
       <div class="hero-bottom animate-fade-in delay-2">
-        <p class="hero-subtitle text-glow">南城の風を、未来のコードへ。<br>市役所を舞台に、世界をビルドする。</p>
-        <a href="#concept" class="btn btn-primary magnetic">Start Adventure</a>
+        <a href="#concept" class="btn btn-primary magnetic">START ADVENTURE</a>
       </div>
     </div>
   </header>
@@ -106,6 +111,7 @@
           <p class="sub-copy">
             学校でも家でもない、新しいサードプレイス。<br><br>地域の象徴である市役所をベースキャンプに、あなたのアイデアを形にするための環境が揃っています。<br>テクノロジーと自然が交差するこの場所で、日常のすぐ隣にある冒険をはじめよう。
           </p>
+          <p class="audience-details"><span>対象：小学3年生〜高校生（18歳未満）</span><strong>参加無料</strong></p>
         </div>
         <!-- Overlaid Map with MC grid -->
         <div class="visual-block reveal-slide-up delay-1 hover-tilt map-minecraft-overlay" data-tilt>
@@ -183,7 +189,7 @@
             <a href="#">
               <span class="news-date">2026.04.01</span>
               <span class="news-category cat-info">Info</span>
-              <p class="news-title">CodeDojo.南城 公式サイトをオープン！</p>
+              <p class="news-title">CoderDojo南城 公式サイトをオープン！</p>
             </a>
           </li>
 
@@ -240,7 +246,7 @@
               <div class="mentor-avatar bg-gradient pulse"></div>
               <div class="creator-name">
                 <h3>Yuki O.</h3>
-                <p class="role">U-22 Creator</p>
+                <p class="role">Teen Creator（18歳未満）</p>
               </div>
             </div>
           </div>
@@ -266,7 +272,7 @@
       <div class="container">
         <h2 class="section-title text-center text-glow-hover"
           style="font-size: clamp(2rem, 8vw, 4rem); margin-bottom: 5rem;">Supporters</h2>
-        <div class="card-grid asymmetric-grid">
+        <div class="card-grid supporters-grid">
           <!-- Supporter: Momou -->
           <div class="card blueprint-card reveal-slide-up hover-tilt magnetic">
             <div class="card-glow"></div>
@@ -275,12 +281,24 @@
             </div>
             <h3 class="card-title" style="font-size: 2rem; border-bottom: none;">桃宇</h3>
             <p class="role text-glow"
-              style="color: var(--color-accent-orange); font-weight: bold; margin-bottom: 1rem;">Champion</p>
-            <p class="card-text">南城市で活動するジュニアクリエイター。<br>次世代のクリエイターが思い切り想像力を発揮できる環境づくりに尽力。<br>若き才能の成長と開花を全力で応援しています。</p>
+              style="color: var(--color-accent-orange); font-weight: bold; margin-bottom: 1rem;">Founder</p>
+            <p class="card-text">CoderDojo南城を立ち上げたジュニアクリエイター。<br>子どもたちが思い切り想像力を発揮できる場を仲間と一緒につくっています。</p>
+          </div>
+
+          <!-- Supporter: Yamaguchi -->
+          <div class="card blueprint-card reveal-slide-up delay-1 hover-tilt magnetic">
+            <div class="card-glow"></div>
+            <div class="blueprint-lines"></div>
+            <div class="mentor-avatar bg-gradient pulse" style="margin-bottom: 1.5rem; width: 100px; height: 100px;">
+            </div>
+            <h3 class="card-title" style="font-size: 2rem; border-bottom: none;">山口</h3>
+            <p class="role text-glow"
+              style="color: var(--color-accent-orange); font-weight: bold; margin-bottom: 1rem;">共同運営者</p>
+            <p class="card-text">CoderDojo浦添＆宜野湾を運営。<br>CoderDojo南城の成人共同運営者として、活動全体と子どもたちの安全な学びを支えています。</p>
           </div>
 
           <!-- Supporter: Sugiyama -->
-          <div class="card blueprint-card reveal-slide-up delay-1 hover-tilt magnetic mt-offset">
+          <div class="card blueprint-card reveal-slide-up delay-2 hover-tilt magnetic">
             <div class="card-glow"></div>
             <div class="blueprint-lines"></div>
             <div class="mentor-avatar pulse" style="margin-bottom: 1.5rem; width: 100px; height: 100px; background: linear-gradient(135deg, #11998e, #38ef7d);">
@@ -290,17 +308,36 @@
               style="color: var(--color-accent-orange); font-weight: bold; margin-bottom: 1rem;">遊びのギルド主催者</p>
             <p class="card-text">南城市にて遊びのギルドを主催し、遊びを通じた学びや創造的な体験の場づくりに取り組まれています。<br>子どもたちが主体的に考え、試し、楽しみながら成長できる環境づくりを実践。CoderDojo南城を支えてくれる心強い仲間です！</p>
           </div>
+        </div>
 
-          <!-- Supporter: Yamaguchi -->
-          <div class="card blueprint-card reveal-slide-up hover-tilt magnetic">
+        <div class="supporting-organizations-grid">
+          <!-- Supporting Organization: Nanjo City Youth Development Citizens' Council -->
+          <div class="card blueprint-card supporter-organization-card reveal-slide-up hover-tilt">
             <div class="card-glow"></div>
             <div class="blueprint-lines"></div>
-            <div class="mentor-avatar bg-gradient pulse" style="margin-bottom: 1.5rem; width: 100px; height: 100px;">
+            <div class="organization-mark council-mark pulse" aria-hidden="true">育</div>
+            <div class="organization-copy">
+              <p class="role text-glow">共催団体</p>
+              <h3 class="card-title">南城市青少年育成市民会議</h3>
+              <p class="card-text">広く市民の創意を結集し、国・県の施策と連携して青少年の健全育成を図る市民会議。南城市とともに中学生「少年の主張大会」や、子どもたちの体験学習などに取り組んでいます。</p>
             </div>
-            <h3 class="card-title" style="font-size: 2rem; border-bottom: none;">山口</h3>
-            <p class="role text-glow"
-              style="color: var(--color-accent-orange); font-weight: bold; margin-bottom: 1rem;">Mentor</p>
-            <p class="card-text">CoderDojo浦添＆宜野湾を運営。<br>南城市でのCoderDojo開設と活動をサポートします。</p>
+            <a href="https://www.edu.city.nanjo.okinawa.jp/userfiles/AZf24xL/files/r8kyouikusisaku.pdf"
+              class="supporter-site-link magnetic" target="_blank" rel="noopener noreferrer"
+              aria-label="令和8年度南城市の教育施策を見る">南城市の教育施策を見る ↗</a>
+          </div>
+
+          <!-- Supporting Organization: StarCrafters -->
+          <div class="card blueprint-card supporter-organization-card reveal-slide-up hover-tilt">
+            <div class="card-glow"></div>
+            <div class="blueprint-lines"></div>
+            <div class="organization-mark pulse" aria-hidden="true">✦</div>
+            <div class="organization-copy">
+              <p class="role text-glow">連携団体</p>
+              <h3 class="card-title">特定非営利活動法人StarCrafters</h3>
+              <p class="card-text">子育て・教育イベントや探究学習、デジタル技術講座などを通して、世代を超えて学び合い、支え合う地域コミュニティづくりに取り組んでいます。</p>
+            </div>
+            <a href="https://www.star-crafters.org/" class="supporter-site-link magnetic" target="_blank"
+              rel="noopener noreferrer" aria-label="特定非営利活動法人StarCraftersの公式サイトを見る">公式サイトを見る ↗</a>
           </div>
         </div>
       </div>
@@ -310,14 +347,14 @@
     <section id="dojo-life" class="section dojo-life">
       <div class="container grid-free">
         <div class="visual-block reveal-slide-up hover-tilt mask-polygon-scroll" style="margin-top: 0; padding-top: 0;">
-          <img src="assets/dojo.png" alt="なんじぃカフェでの活動風景" class="life-image">
+          <img src="assets/dojo-children.png" alt="小中高生が大人のメンターに見守られながらプログラミングや電子工作を楽しむ活動イメージ" class="life-image">
         </div>
         <div class="text-block reveal-slide-up delay-1">
           <h2 class="section-title text-glow-hover"
             style="font-size: clamp(1.2rem, 5vw, 2.8rem); line-height:1.4; margin-bottom:1.5rem; color:var(--color-accent-orange);">
             南城の風を、未来のコードへ。<br>市役所を舞台に、<br>世界をビルドする。</h2>
           <p class="sub-copy">
-            南城市役所が、君のクリエイティブ・スタジオになる。<br><br>豊かな自然と静寂の中で、仲間と共にマインクラフトで街を設計し、ゲーム制作で未知の境界を突破する。<br>行政の真ん中から、U-22世代の想像力を解き放つクリエイティブな実験場、CodeDojo.南城。
+            南城市役所が、子どもたちのクリエイティブ・スタジオになる。<br><br>小学3年生から高校生までの18歳未満の子どもたちが、仲間と一緒にマインクラフトで街を設計したり、ゲームや電子工作をつくったりできる場所です。<br>大人の運営者やメンターが見守る、子どものための無料プログラミング道場、CoderDojo南城です。
           </p>
         </div>
       </div>
@@ -332,7 +369,7 @@
           お問い合わせはこちら
         </a>
       </div>
-      <p class="footer-copy">&copy; 2026 CodeDojo.Nanjo All Rights Reserved.</p>
+      <p class="footer-copy">&copy; 2026 CoderDojo南城 All Rights Reserved.</p>
     </div>
   </footer>
 

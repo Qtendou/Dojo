@@ -429,7 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // 10. Countdown Timer
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
-  const targetDate = new Date('2026-07-12T14:00:00+09:00').getTime();
+  const targetDate = new Date('2026-09-21T13:00:00+09:00').getTime();
   const daysEl = document.getElementById('countdown-days');
   const timeEl = document.getElementById('countdown-time');
   

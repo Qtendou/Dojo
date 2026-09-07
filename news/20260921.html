@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第4回CoderDojo南城 参加者募集！ - CoderDojo南城</title>
+  <meta name="description" content="2026年9月21日（月・敬老の日）開催、第4回CoderDojo南城の参加者募集ページです。プログラミング、デジタル創作、マイクラなど、テーマフリーで楽しめます。">
+
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="shortcut icon" type="image/png" href="../favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(10, 25, 47, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 4rem;
+      color: var(--color-limestone-white);
+    }
+
+    .article-header {
+      margin-bottom: 3rem;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 2rem;
+    }
+
+    .article-title {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      color: var(--color-accent-orange);
+    }
+
+    .article-meta {
+      font-family: var(--font-mono);
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 1.1rem;
+    }
+
+    .article-content h3 {
+      font-size: 1.8rem;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255, 90, 0, 0.3);
+      color: var(--color-limestone-white);
+    }
+
+    .article-content h4 {
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #48CAE4;
+    }
+
+    .article-content p,
+    .article-content ul {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: var(--color-text-light);
+    }
+
+    .article-content ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .article-content li {
+      margin-bottom: 0.8rem;
+    }
+
+    @media (max-width: 768px) {
+      .article-container {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="asymmetric-layout">
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <div id="tide-bg" class="tide-background"></div>
+  <canvas id="wave-canvas"></canvas>
+
+  <div id="bg-typography" class="bg-typography">MEETUP</div>
+
+  <main>
+    <section class="section" style="padding-top: 8rem; padding-bottom: 5rem;">
+      <div class="container">
+        <a href="../index.html" class="btn-back magnetic"
+          style="display: inline-block; margin-bottom: 3rem; color: var(--color-accent-orange); font-weight: bold; font-family: var(--font-heading); text-transform: uppercase; border-bottom: 2px solid transparent; transition: border-color 0.3s ease;">
+          <span style="margin-right: 0.5rem;">&larr;</span> Back to Home
+        </a>
+
+        <div class="article-container">
+          <div class="article-header">
+            <h1 class="article-title text-glow">第4回CoderDojo南城 参加者募集！</h1>
+            <div class="article-meta">2026.09.07 / Event</div>
+          </div>
+
+          <div class="article-content">
+            <p>
+              南城市の18歳未満のみんなとプログラミングやマイクラ、デジタル創作を楽しむ「CoderDojo南城」の第4回を開催します！<br>
+              今回もテーマは自由。作りたいもの、試したいことを持ち寄って、一緒にクリエイティブな時間を楽しみましょう。プログラミングが初めての方も大歓迎です！
+            </p>
+
+            <h3>開催概要</h3>
+            <ul>
+              <li><strong>日時：</strong> 2026年9月21日（月・敬老の日）13:00〜17:00</li>
+              <li><strong>対象：</strong> 小学3年生〜高校生（18歳未満／PC操作がある程度できる方推奨）</li>
+              <li><strong>参加費：</strong> 無料</li>
+              <li><strong>会場：</strong> 南城市役所 1階 大会議室<br>（沖縄県南城市佐敷字新里1870番地）</li>
+              <li><strong>内容：</strong> テーマフリー。プログラミング、デジタル創作、マイクラなど、なんでもOK！</li>
+              <li><strong>持ち物：</strong>
+                ノートパソコン、タブレットなど、創作活動に必要な機器をご持参ください。会場に体験用のパソコンを数台準備していますが、利用は交代制・順番待ちになる場合があります。</li>
+              <li><strong>主催：</strong> CoderDojo南城</li>
+              <li><strong>共催：</strong> 南城市青少年育成市民会議</li>
+              <li><strong>協力：</strong> 遊びのギルド、特定非営利活動法人StarCrafters、CoderDojo浦添、宜野湾</li>
+            </ul>
+
+            <h3>CoderDojoの楽しみ方</h3>
+
+            <h4>🎮 自分の「やりたい」を形に</h4>
+            <p>
+              マインクラフトでの建築やプログラミング、デジタルイラスト、動画制作など、あなたが今ハマっているデジタル創作を自由に楽しむ時間です。
+            </p>
+
+            <h4>🤝 仲間とつながる・刺激し合う</h4>
+            <p>
+              同じ趣味を持つ仲間と同じ空間で過ごすことで、新しいアイデアが生まれたり、作品を見せ合ったりできます。一人でじっくり取り組むのも、仲間と協力するのも自由です。
+            </p>
+
+            <h4>💡 自主性を大切にする場所</h4>
+            <p>
+              CoderDojoはプログラミングを教える「教室」ではありません。スタッフやメンターが、皆さんの「やってみたい」を必要に応じてサポートします。
+            </p>
+
+            <h3>持ち物・推奨環境</h3>
+            <ul>
+              <li><strong>ご自身のノートPC・タブレット：</strong> 使い慣れたデバイスをぜひご持参ください（充電器も忘れずに！）。</li>
+              <li><strong>マウス・イヤフォン：</strong> 制作に必要な周辺機器も、お持ちの方はご持参ください。</li>
+            </ul>
+
+            <h3>メンター（サポーター）より</h3>
+            <p>
+              CoderDojo南城の活動を支えるエンジニアやクリエイターが、皆さんの創作活動を温かく見守ります。南城市役所で、クリエイティブな午後を一緒に過ごしましょう！
+            </p>
+
+            <div class="caution-box magnetic">
+              <div class="caution-tape-top">
+                <span class="caution-tape-text">⚠ 重要 ⚠</span>
+                <span class="caution-tape-text">⚠ 重要 ⚠</span>
+                <span class="caution-tape-text">⚠ 重要 ⚠</span>
+              </div>
+              <div class="caution-content">
+                <div class="caution-title">ご確認事項</div>
+                <p>
+                  本イベントは「講義形式」ではありません。<br>
+                  基本的にはプログラミングのレクチャー等は行いませんので、自分のプロジェクトや、やってみたいことを持って遊びに来てくださいね！
+                </p>
+              </div>
+              <div class="caution-tape-bottom">
+                <span class="caution-tape-text">⚠ IMPORTANT ⚠</span>
+                <span class="caution-tape-text">⚠ IMPORTANT ⚠</span>
+                <span class="caution-tape-text">⚠ IMPORTANT ⚠</span>
+              </div>
+            </div>
+
+            <h3>会場</h3>
+            <p>
+              <strong>南城市役所 1階 大会議室</strong><br>
+              沖縄県南城市佐敷字新里1870番地
+            </p>
+
+            <h3>お申し込み方法</h3>
+            <p>以下の参加フォームよりお申し込みください。（※先着順となります）</p>
+
+            <div style="text-align: center; margin-top: 2rem;">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpJiSzL6M4GKV16R0KvC9ATAMjpAB8iw0MHqHp5D2yfe2U6w/viewform?usp=header"
+                class="btn btn-primary magnetic" target="_blank" rel="noopener noreferrer">申込みフォームを開く</a>
+            </div>
+
+            <div class="form-container reveal-slide-up"
+              style="margin-top: 3rem; background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 1rem; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfpJiSzL6M4GKV16R0KvC9ATAMjpAB8iw0MHqHp5D2yfe2U6w/viewform?embedded=true"
+                title="CoderDojo南城 参加申込みフォーム" width="100%" height="1200" frameborder="0" marginheight="0"
+                marginwidth="0" style="border: none;">読み込んでいます…</iframe>
+            </div>
+
+            <div class="line-openchat-card reveal-slide-up" style="margin-top: 4rem;">
+              <div class="line-openchat-copy">
+                <p class="line-openchat-label">LINE OpenChat</p>
+                <h3 class="line-openchat-title">オープンチャット「CoderDojo南城」</h3>
+                <p class="line-openchat-text">開催情報などのお知らせはLINEで配信します！</p>
+                <a href="https://line.me/ti/g2/et2RMUPfWSarXC6NyS1pV4Phf2cipNI4Tadpcg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+                  class="btn btn-primary magnetic line-openchat-link" target="_blank"
+                  rel="noopener noreferrer">LINEで参加する</a>
+              </div>
+              <a href="https://line.me/ti/g2/et2RMUPfWSarXC6NyS1pV4Phf2cipNI4Tadpcg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+                class="line-openchat-qr" target="_blank" rel="noopener noreferrer"
+                aria-label="CoderDojo南城 LINEオープンチャット">
+                <img src="../assets/line-openchat-qr.jpg" alt="CoderDojo南城 LINEオープンチャットのQRコード">
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <div style="margin-bottom: 2rem;">
+        <a href="https://forms.gle/9Gci9aAaHjvnj59h7" target="_blank" rel="noopener noreferrer"
+          style="color: var(--color-accent-orange); text-decoration: underline; font-weight: bold; font-size: 1.1rem; letter-spacing: 0.05em; transition: opacity 0.3s ease;"
+          onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+          お問い合わせはこちら
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 CoderDojo南城 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="../script.js"></script>
+</body>
+
+</html>
